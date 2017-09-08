@@ -8,7 +8,8 @@ public class Athlete {
     private String firstName;
     private String lastName;
     private double yearsExperience;
-    private int championships;
+    private int championships = 0;
+    private int score = 0;
 
     public String getFirstName () {
         return "First name: " + this.firstName;
@@ -34,6 +35,17 @@ public class Athlete {
         this.lastName = name;
     }
 
+    public void incrementChampionships () {
+        this.championships++;
+    }
+
+    public void incrementScore () {
+        this.score++;
+    }
+
+    public void decrementScore () {
+        this.score--;
+    }
 
     public Athlete (String first, String last, double exp, int championships) {
         this.firstName = first;
