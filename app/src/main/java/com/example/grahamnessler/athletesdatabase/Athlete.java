@@ -12,15 +12,15 @@ public class Athlete {
     private int championships;
 
     public String getFirstName () {
-        return "First name:" + this.firstName;
+        return "First name: " + this.firstName;
     }
 
     public String getLastName () {
-        return "Last name:" + this.lastName;
+        return "Last name: " + this.lastName;
     }
 
     public String getSport () {
-        return "role:" + this.sport;
+        return "sport: " + this.sport;
     }
 
     public String getExp () {
@@ -33,6 +33,10 @@ public class Athlete {
 
     public void setFirstName (String name) {
         this.firstName = name;
+    }
+
+    public void setLastName (String name) {
+        this.lastName = name;
     }
 
 
