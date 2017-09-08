@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initializeGame(View view) {
-
+        Athlete player1 = new Athlete("Zane", "Milakovic");
     }
 
 }

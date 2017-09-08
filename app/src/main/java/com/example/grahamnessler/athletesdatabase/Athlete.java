@@ -27,6 +27,10 @@ public class Athlete {
         return this.firstName + " has won " + this.championships + " championships.";
     }
 
+    public int getScore() {
+        return this.score;
+    }
+
     public void setFirstName (String name) {
         this.firstName = name;
     }
