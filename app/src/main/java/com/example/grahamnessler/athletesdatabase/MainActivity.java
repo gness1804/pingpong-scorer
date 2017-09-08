@@ -22,4 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
+    public void initializeGame(View view) {
+
+    }
+
 }
