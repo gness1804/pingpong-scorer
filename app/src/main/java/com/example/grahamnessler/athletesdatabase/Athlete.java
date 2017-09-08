@@ -7,7 +7,6 @@ package com.example.grahamnessler.athletesdatabase;
 public class Athlete {
     private String firstName;
     private String lastName;
-    private String sport;
     private double yearsExperience;
     private int championships;
 
@@ -17,10 +16,6 @@ public class Athlete {
 
     public String getLastName () {
         return "Last name: " + this.lastName;
-    }
-
-    public String getSport () {
-        return "sport: " + this.sport;
     }
 
     public String getExp () {
@@ -40,11 +35,15 @@ public class Athlete {
     }
 
 
-    public Athlete (String first, String last, String sport, double exp, int championships) {
+    public Athlete (String first, String last, double exp, int championships) {
         this.firstName = first;
         this.lastName = last;
-        this.sport = sport;
         this.yearsExperience = exp;
         this.championships = championships;
+    }
+
+    public Athlete (String first, String last) {
+        this.firstName = first;
+        this.lastName = last;
     }
 }
