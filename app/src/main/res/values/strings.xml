@@ -3,4 +3,6 @@
     <string name="action_settings">Settings</string>
     <string name="firstName" />
     <string name="lastName" />
+    <string name="p1FirstName" />
+    <string name="p1LastName" />
 </resources>
