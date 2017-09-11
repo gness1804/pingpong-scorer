@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void initializeGame(View view) {
         Athlete player1 = new Athlete("Zane", "Milakovic");
+        Athlete player2 = new Athlete("Neal", "Alpert");
+        Log.d("Sanity check", "Sanity check");
     }
 
 }

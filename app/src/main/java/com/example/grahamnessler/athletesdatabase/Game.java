@@ -12,6 +12,7 @@ public class Game {
     int p2Score = player2.getScore();
 
     public Game (Athlete p1, Athlete p2) {
-
+        this.player1 = p1;
+        this.player2 = p2;
     }
 }
