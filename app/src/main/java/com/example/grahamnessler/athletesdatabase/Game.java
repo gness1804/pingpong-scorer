@@ -15,4 +15,8 @@ public class Game {
         this.player1 = p1;
         this.player2 = p2;
     }
+
+    public void startGame () {
+
+    }
 }
