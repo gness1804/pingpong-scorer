@@ -7,7 +7,7 @@ package com.example.grahamnessler.athletesdatabase;
 public class Athlete {
     private String firstName;
     private String lastName;
-    private double yearsExperience;
+    private double yearsExperience = 0;
     private int championships = 0;
     private int score = 0;
 
