@@ -25,10 +25,19 @@ public class MainActivity extends AppCompatActivity {
     public void initializeGame(View view) {
         EditText p1FirstName = (EditText) findViewById(R.id.p1FirstName);
         String p1First = p1FirstName.getText().toString();
+
         EditText p1LastName = (EditText) findViewById(R.id.p1LastName);
         String p1Last = p1LastName.getText().toString();
+
+        EditText p2FirstName = (EditText) findViewById(R.id.p2FirstName);
+        String p2First = p2FirstName.getText().toString();
+
+        EditText p2LastName = (EditText) findViewById(R.id.p2LastName);
+        String p2Last = p1LastName.getText().toString();
+
         Athlete player1 = new Athlete(p1First, p1Last);
-        Athlete player2 = new Athlete("Neal", "Alpert");
+        Athlete player2 = new Athlete(p2First, p2Last);
+
         Game game = new Game(player1, player2);
         game.startGame();
     }
