@@ -19,6 +19,7 @@ public class Game {
     }
 
     public void startGame () {
+        // do a new intent here to start new activity
 
     }
 }
