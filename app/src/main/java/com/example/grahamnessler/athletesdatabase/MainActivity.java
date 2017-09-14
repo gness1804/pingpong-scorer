@@ -16,7 +16,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String TEST = "com.example.myfirstapp.TEST";
+    public static String p1First;
+    public static String p1Last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void initializeGame(View view) {
         EditText p1FirstName = (EditText) findViewById(R.id.p1FirstName);
-        String p1First = p1FirstName.getText().toString();
+        p1First = p1FirstName.getText().toString();
 
         EditText p1LastName = (EditText) findViewById(R.id.p1LastName);
-        String p1Last = p1LastName.getText().toString();
+        p1Last = p1LastName.getText().toString();
 
         EditText p2FirstName = (EditText) findViewById(R.id.p2FirstName);
         String p2First = p2FirstName.getText().toString();
@@ -49,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
 
         if (p1First.length() > 0 && p1Last.length() > 0 && p2First.length() > 0 && p2Last.length() > 0) {
             Intent intent = new Intent(this, GameActivity.class);
-            intent.putExtra(TEST, "world");
+            intent.putExtra(p1First, p1First);
+            intent.putExtra(p1Last, p1Last);
             startActivity(intent);
+            // below code gets moved to GameActivity
 //            Athlete player1 = new Athlete(p1First, p1Last);
 //            Athlete player2 = new Athlete(p2First, p2Last);
 //            Game game = new Game(player1, player2);

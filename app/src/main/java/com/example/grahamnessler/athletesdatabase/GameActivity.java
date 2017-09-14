@@ -19,10 +19,16 @@ public class GameActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        String test = intent.getStringExtra(MainActivity.TEST);
+
+        String test = intent.getStringExtra(MainActivity.p1First);
 
         TextView view = (TextView) findViewById(R.id.test);
         view.setText(test);
+
+        String test2 = intent.getStringExtra(MainActivity.p1Last);
+
+        TextView view2 = (TextView) findViewById(R.id.test2);
+        view2.setText(test2);
 
     }
 
