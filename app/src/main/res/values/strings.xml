@@ -12,4 +12,6 @@
     <string name="test2" />
     <string name="p1FirstDynamic" />
     <string name="p1LastDynamic" />
+    <string name="p2FirstDyamic" />
+    <string name="p2LastDynamic" />
 </resources>

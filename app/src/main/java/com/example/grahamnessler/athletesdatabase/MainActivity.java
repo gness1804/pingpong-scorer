@@ -18,6 +18,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     public static String p1First;
     public static String p1Last;
+    public static String p2First;
+    public static String p2Last;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,15 +45,17 @@ public class MainActivity extends AppCompatActivity {
         p1Last = p1LastName.getText().toString();
 
         EditText p2FirstName = (EditText) findViewById(R.id.p2FirstName);
-        String p2First = p2FirstName.getText().toString();
+        p2First = p2FirstName.getText().toString();
 
         EditText p2LastName = (EditText) findViewById(R.id.p2LastName);
-        String p2Last = p2LastName.getText().toString();
+        p2Last = p2LastName.getText().toString();
 
         if (p1First.length() > 0 && p1Last.length() > 0 && p2First.length() > 0 && p2Last.length() > 0) {
             Intent intent = new Intent(this, GameActivity.class);
             intent.putExtra(p1First, p1First);
             intent.putExtra(p1Last, p1Last);
+            intent.putExtra(p2First, p2First);
+            intent.putExtra(p2Last, p2Last);
             startActivity(intent);
         } else {
             throwEmptyFieldError();
