@@ -53,11 +53,6 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(p1First, p1First);
             intent.putExtra(p1Last, p1Last);
             startActivity(intent);
-            // below code gets moved to GameActivity
-//            Athlete player1 = new Athlete(p1First, p1Last);
-//            Athlete player2 = new Athlete(p2First, p2Last);
-//            Game game = new Game(player1, player2);
-//            game.startGame();
         } else {
             throwEmptyFieldError();
         }

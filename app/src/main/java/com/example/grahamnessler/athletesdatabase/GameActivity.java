@@ -13,23 +13,29 @@ public class GameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //boilerplate
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //start the new game activity
         Intent intent = getIntent();
 
-        String test = intent.getStringExtra(MainActivity.p1First);
+        String p1First = intent.getStringExtra(MainActivity.p1First);
 
-        TextView view = (TextView) findViewById(R.id.test);
-        view.setText(test);
+        TextView p1FView = (TextView) findViewById(R.id.test);
+        p1FView.setText(p1First);
 
-        String test2 = intent.getStringExtra(MainActivity.p1Last);
+        String p1Last = intent.getStringExtra(MainActivity.p1Last);
 
-        TextView view2 = (TextView) findViewById(R.id.test2);
-        view2.setText(test2);
+        TextView p1LView = (TextView) findViewById(R.id.test2);
+        p1LView.setText(p1Last);
 
+//        Athlete player1 = new Athlete(p1First, p1Last);
+//        Athlete player2 = new Athlete(p2First, p2Last);
+//        Game game = new Game(player1, player2);
+//        game.startGame();
     }
 
 }
