@@ -2,11 +2,8 @@ package com.example.grahamnessler.athletesdatabase;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
@@ -24,12 +21,12 @@ public class GameActivity extends AppCompatActivity {
 
         String p1First = intent.getStringExtra(MainActivity.p1First);
 
-        TextView p1FView = (TextView) findViewById(R.id.test);
+        TextView p1FView = (TextView) findViewById(R.id.p1FirstDynamic);
         p1FView.setText(p1First);
 
         String p1Last = intent.getStringExtra(MainActivity.p1Last);
 
-        TextView p1LView = (TextView) findViewById(R.id.test2);
+        TextView p1LView = (TextView) findViewById(R.id.p1LastDynamic);
         p1LView.setText(p1Last);
 
 //        Athlete player1 = new Athlete(p1First, p1Last);

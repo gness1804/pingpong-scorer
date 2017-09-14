@@ -10,4 +10,6 @@
     <string name="title_activity_game">GameActivity</string>
     <string name="test" />
     <string name="test2" />
+    <string name="p1FirstDynamic" />
+    <string name="p1LastDynamic" />
 </resources>
