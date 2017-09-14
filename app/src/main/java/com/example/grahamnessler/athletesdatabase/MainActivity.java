@@ -1,6 +1,7 @@
 package com.example.grahamnessler.athletesdatabase;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String TEST = "com.example.myfirstapp.TEST";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,10 +48,13 @@ public class MainActivity extends AppCompatActivity {
         String p2Last = p2LastName.getText().toString();
 
         if (p1First.length() > 0 && p1Last.length() > 0 && p2First.length() > 0 && p2Last.length() > 0) {
-            Athlete player1 = new Athlete(p1First, p1Last);
-            Athlete player2 = new Athlete(p2First, p2Last);
-            Game game = new Game(player1, player2);
-            game.startGame();
+            Intent intent = new Intent(this, GameActivity.class);
+            intent.putExtra(TEST, "world");
+            startActivity(intent);
+//            Athlete player1 = new Athlete(p1First, p1Last);
+//            Athlete player2 = new Athlete(p2First, p2Last);
+//            Game game = new Game(player1, player2);
+//            game.startGame();
         } else {
             throwEmptyFieldError();
         }

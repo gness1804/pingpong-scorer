@@ -7,4 +7,6 @@
     <string name="p1LastName" />
     <string name="p2FirstName" />
     <string name="p2LastName" />
+    <string name="title_activity_game">GameActivity</string>
+    <string name="test" />
 </resources>
