@@ -17,6 +17,10 @@ public class Athlete {
         return this.score;
     }
 
+    public String getFirstName() {
+        return this.firstName;
+    }
+
     public void incrementWins () {
         this.wins++;
     }

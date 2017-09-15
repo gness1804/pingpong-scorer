@@ -110,4 +110,12 @@ public class GameActivity extends AppCompatActivity {
         Intent intent = new Intent(this, WinnersCircle.class);
         startActivity(intent);
     }
+
+    public void showWinnerToast (Athlete winner) {
+        Context context = getApplicationContext();
+        CharSequence text = "The winner is: " + winner.getFirstName();
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast.makeText(context, text, duration).show();
+    }
 }
