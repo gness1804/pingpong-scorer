@@ -37,12 +37,12 @@ public class GameActivity extends AppCompatActivity {
         String p2Last = intent.getStringExtra(MainActivity.p2Last);
 
         TextView p2LView = (TextView) findViewById(R.id.p2LastDynamic);
-        p2LView.setText(p1Last);
+        p2LView.setText(p2Last);
 
-//        Athlete player1 = new Athlete(p1First, p1Last);
-//        Athlete player2 = new Athlete(p2First, p2Last);
-//        Game game = new Game(player1, player2);
-//        game.startGame();
+        Athlete player1 = new Athlete(p1First, p1Last);
+        Athlete player2 = new Athlete(p2First, p2Last);
+        Game game = new Game(player1, player2);
+        game.startGame();
     }
 
 }
