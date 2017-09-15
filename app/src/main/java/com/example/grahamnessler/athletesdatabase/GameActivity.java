@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class GameActivity extends AppCompatActivity {
+    private Athlete player1;
+    private Athlete player2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
 
         //boilerplate
         super.onCreate(savedInstanceState);
@@ -44,8 +47,8 @@ public class GameActivity extends AppCompatActivity {
         TextView p2LView = (TextView) findViewById(R.id.p2LastDynamic);
         p2LView.setText(p2Last);
 
-        Athlete player1 = new Athlete(p1First, p1Last);
-        Athlete player2 = new Athlete(p2First, p2Last);
+        player1 = new Athlete(p1First, p1Last);
+        player2 = new Athlete(p2First, p2Last);
         Game game = new Game(player1, player2);
         game.startGame();
 
@@ -59,8 +62,11 @@ public class GameActivity extends AppCompatActivity {
         p2Score.setText(p2ScoreString);
     }
 
-    public void showInitialScores () {
-
+    public void incrementP1Score(View view) {
+        player1.incrementScore();
+        TextView p1Score = (TextView) findViewById(R.id.p1Score);
+        String p1ScoreString = Integer.toString(player1.getScore());
+        p1Score.setText(p1ScoreString);
     }
 
 }
