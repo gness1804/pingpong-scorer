@@ -56,6 +56,11 @@ public class GameActivity extends AppCompatActivity {
         showNewScore();
     }
 
+    public void decrementP1Score(View view) {
+        player1.decrementScore();
+        showNewScore();
+    }
+
     private void insertPlayersNames () {
         TextView p1FView = (TextView) findViewById(R.id.p1FirstDynamic);
         p1FView.setText(p1First);

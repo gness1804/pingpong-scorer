@@ -19,7 +19,5 @@ public class Game {
     public void startGame () {
         this.player1.resetScore();
         this.player2.resetScore();
-//        String p1ScoreString = Integer.toString(player1.getScore());
-//        String p2ScoreString = Integer.toString(player2.getScore());
     }
 }
