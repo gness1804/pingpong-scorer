@@ -62,11 +62,32 @@
         tools:layout_editor_absoluteX="43dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/p1StaticLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="247dp"
         android:text="Player 1: "
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="43dp" />
+
+    <TextView
+        android:id="@+id/p2Score"
+        android:layout_width="55dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="255dp"
+        android:text="@string/p2Score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/p1Score"
+        android:layout_width="55dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="87dp"
+        android:layout_marginLeft="43dp"
+        android:text="@string/p1Score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

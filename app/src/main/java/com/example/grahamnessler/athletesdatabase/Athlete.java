@@ -51,6 +51,10 @@ public class Athlete {
         this.score--;
     }
 
+    public void resetScore() {
+        this.score = 0;
+    }
+
     public Athlete (String first, String last, double exp, int championships) {
         this.firstName = first;
         this.lastName = last;
