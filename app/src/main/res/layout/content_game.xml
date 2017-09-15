@@ -8,6 +8,17 @@
     tools:context="com.example.grahamnessler.athletesdatabase.GameActivity"
     tools:showIn="@layout/activity_game">
 
+    <Button
+        android:id="@+id/p2Inc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="121dp"
+        android:onClick="incrementP2Score"
+        android:text="+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="54dp"
+        app:layout_constraintRight_toRightOf="parent" />
+
     <TextView
         android:id="@+id/p2FirstDynamic"
         android:layout_width="82dp"
@@ -99,6 +110,17 @@
         tools:layout_editor_absoluteX="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="30dp" />
+
+    <Button
+        android:id="@+id/p2Dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="54dp"
+        android:onClick="decrementP2Score"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
         android:id="@+id/p1Inc"

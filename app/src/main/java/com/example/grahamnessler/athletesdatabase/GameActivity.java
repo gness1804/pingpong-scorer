@@ -58,8 +58,18 @@ public class GameActivity extends AppCompatActivity {
         showNewScore();
     }
 
+    public void incrementP2Score(View view) {
+        player2.incrementScore();
+        showNewScore();
+    }
+
     public void decrementP1Score(View view) {
         player1.decrementScore();
+        showNewScore();
+    }
+
+    public void decrementP2Score(View view) {
+        player2.decrementScore();
         showNewScore();
     }
 
