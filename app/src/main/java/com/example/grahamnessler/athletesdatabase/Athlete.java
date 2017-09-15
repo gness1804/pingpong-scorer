@@ -1,8 +1,5 @@
 package com.example.grahamnessler.athletesdatabase;
 
-import android.content.Context;
-import android.widget.Toast;
-
 /**
  * Created by grahamnessler on 9/8/17.
  */
@@ -11,20 +8,20 @@ public class Athlete {
     public double id;
     private String firstName;
     private String lastName;
-    private int championships = 0;
+    private int wins = 0;
     private int score = 0;
     private Game game;
 
     public String getChampionships() {
-        return this.firstName + " has won " + this.championships + " championships.";
+        return this.firstName + " has won " + this.wins + " championships.";
     }
 
     public int getScore() {
         return this.score;
     }
 
-    public void incrementChampionships () {
-        this.championships++;
+    public void incrementWins () {
+        this.wins++;
     }
 
     public void addGame (Game game) {

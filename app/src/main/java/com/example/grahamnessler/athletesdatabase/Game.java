@@ -23,7 +23,7 @@ public class Game {
 
     public void endGame (Athlete winner) {
         this.winner = winner;
-        winner.incrementChampionships();
-
+        winner.incrementWins();
+        //start new activity
     }
 }
