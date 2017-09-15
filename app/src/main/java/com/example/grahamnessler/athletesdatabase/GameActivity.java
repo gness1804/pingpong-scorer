@@ -17,6 +17,7 @@ public class GameActivity extends AppCompatActivity {
     private String p1Last;
     private String p2First;
     private String p2Last;
+    public Game game;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +91,9 @@ public class GameActivity extends AppCompatActivity {
     private void startNewGame () {
         player1 = new Athlete(p1First, p1Last);
         player2 = new Athlete(p2First, p2Last);
-        Game game = new Game(player1, player2);
+        game = new Game(player1, player2);
+        player1.addGame(game);
+        player2.addGame(game);
         game.startGame();
         showNewScore();
     }
@@ -98,5 +101,4 @@ public class GameActivity extends AppCompatActivity {
     public static void showMinScoreError () {
         //throw an error here
     }
-
 }

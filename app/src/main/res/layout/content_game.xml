@@ -132,4 +132,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="31dp" />
 
+    <TextView
+        android:id="@+id/winnerDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="212dp"
+        android:text="@string/winnerDisplay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="142dp" />
+
 </android.support.constraint.ConstraintLayout>

@@ -16,4 +16,5 @@
     <string name="p2LastDynamic" />
     <string name="p1Score" />
     <string name="p2Score" />
+    <string name="winnerDisplay" />
 </resources>
