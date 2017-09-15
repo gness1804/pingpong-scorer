@@ -62,11 +62,15 @@ public class GameActivity extends AppCompatActivity {
         p2Score.setText(p2ScoreString);
     }
 
-    public void incrementP1Score(View view) {
-        player1.incrementScore();
+    private void showNewScore() {
         TextView p1Score = (TextView) findViewById(R.id.p1Score);
         String p1ScoreString = Integer.toString(player1.getScore());
         p1Score.setText(p1ScoreString);
+    }
+
+    public void incrementP1Score(View view) {
+        player1.incrementScore();
+        showNewScore();
     }
 
 }
