@@ -17,4 +17,5 @@
     <string name="p1Score" />
     <string name="p2Score" />
     <string name="winnerDisplay" />
+    <string name="title_activity_winners_circle">WinnersCircle</string>
 </resources>

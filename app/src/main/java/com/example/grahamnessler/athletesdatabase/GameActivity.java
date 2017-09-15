@@ -94,11 +94,16 @@ public class GameActivity extends AppCompatActivity {
         game = new Game(player1, player2);
         player1.addGame(game);
         player2.addGame(game);
-        game.startGame();
+        game.startGame(this);
         showNewScore();
     }
 
     public static void showMinScoreError () {
         //throw an error here
+    }
+
+    public void goToWinnersCircle () {
+        Intent intent = new Intent(this, WinnersCircle.class);
+        startActivity(intent);
     }
 }
