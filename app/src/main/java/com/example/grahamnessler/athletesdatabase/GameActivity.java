@@ -1,5 +1,6 @@
 package com.example.grahamnessler.athletesdatabase;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity {
     private Athlete player1;
@@ -81,6 +83,10 @@ public class GameActivity extends AppCompatActivity {
         Game game = new Game(player1, player2);
         game.startGame();
         showNewScore();
+    }
+
+    public static void showMinScoreError () {
+        //throw an error here
     }
 
 }

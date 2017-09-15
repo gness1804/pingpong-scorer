@@ -1,5 +1,8 @@
 package com.example.grahamnessler.athletesdatabase;
 
+import android.content.Context;
+import android.widget.Toast;
+
 /**
  * Created by grahamnessler on 9/8/17.
  */
@@ -48,6 +51,10 @@ public class Athlete {
     }
 
     public void decrementScore () {
+        if (this.score < 1) {
+            GameActivity.showMinScoreError();
+            return;
+        }
         this.score--;
     }
 
