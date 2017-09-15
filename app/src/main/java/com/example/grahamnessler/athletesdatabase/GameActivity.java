@@ -25,9 +25,6 @@ public class GameActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        TextView p1Score = (TextView) findViewById(R.id.p1Score);
-        TextView p2Score = (TextView) findViewById(R.id.p2Score);
-
         //start the new game activity
         Intent intent = getIntent();
 
@@ -41,25 +38,17 @@ public class GameActivity extends AppCompatActivity {
 
         insertPlayersNames();
 
-        player1 = new Athlete(p1First, p1Last);
-        player2 = new Athlete(p2First, p2Last);
-        Game game = new Game(player1, player2);
-        game.startGame();
-
-        player1.resetScore();
-        player2.resetScore();
-
-        String p1ScoreString = Integer.toString(player1.getScore());
-        String p2ScoreString = Integer.toString(player2.getScore());
-
-        p1Score.setText(p1ScoreString);
-        p2Score.setText(p2ScoreString);
+        startNewGame();
     }
 
     private void showNewScore() {
         TextView p1Score = (TextView) findViewById(R.id.p1Score);
         String p1ScoreString = Integer.toString(player1.getScore());
         p1Score.setText(p1ScoreString);
+
+        TextView p2Score = (TextView) findViewById(R.id.p2Score);
+        String p2ScoreString = Integer.toString(player2.getScore());
+        p2Score.setText(p2ScoreString);
     }
 
     public void incrementP1Score(View view) {
@@ -79,6 +68,14 @@ public class GameActivity extends AppCompatActivity {
 
         TextView p2LView = (TextView) findViewById(R.id.p2LastDynamic);
         p2LView.setText(p2Last);
+    }
+
+    private void startNewGame () {
+        player1 = new Athlete(p1First, p1Last);
+        player2 = new Athlete(p2First, p2Last);
+        Game game = new Game(player1, player2);
+        game.startGame();
+        showNewScore();
     }
 
 }
