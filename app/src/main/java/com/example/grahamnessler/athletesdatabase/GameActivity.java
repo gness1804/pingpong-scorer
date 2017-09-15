@@ -33,23 +33,13 @@ public class GameActivity extends AppCompatActivity {
 
         p1First = intent.getStringExtra(MainActivity.p1First);
 
-        TextView p1FView = (TextView) findViewById(R.id.p1FirstDynamic);
-        p1FView.setText(p1First);
-
         p1Last = intent.getStringExtra(MainActivity.p1Last);
-
-        TextView p1LView = (TextView) findViewById(R.id.p1LastDynamic);
-        p1LView.setText(p1Last);
 
         p2First = intent.getStringExtra(MainActivity.p2First);
 
-        TextView p2FView = (TextView) findViewById(R.id.p2FirstDynamic);
-        p2FView.setText(p2First);
-
         p2Last = intent.getStringExtra(MainActivity.p2Last);
 
-        TextView p2LView = (TextView) findViewById(R.id.p2LastDynamic);
-        p2LView.setText(p2Last);
+        insertPlayersNames();
 
         player1 = new Athlete(p1First, p1Last);
         player2 = new Athlete(p2First, p2Last);
@@ -75,6 +65,20 @@ public class GameActivity extends AppCompatActivity {
     public void incrementP1Score(View view) {
         player1.incrementScore();
         showNewScore();
+    }
+
+    private void insertPlayersNames () {
+        TextView p1FView = (TextView) findViewById(R.id.p1FirstDynamic);
+        p1FView.setText(p1First);
+
+        TextView p1LView = (TextView) findViewById(R.id.p1LastDynamic);
+        p1LView.setText(p1Last);
+
+        TextView p2FView = (TextView) findViewById(R.id.p2FirstDynamic);
+        p2FView.setText(p2First);
+
+        TextView p2LView = (TextView) findViewById(R.id.p2LastDynamic);
+        p2LView.setText(p2Last);
     }
 
 }
