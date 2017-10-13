@@ -18,6 +18,7 @@ public class GameActivity extends AppCompatActivity {
     private String p2First;
     private String p2Last;
     public Game game;
+    public MainActivity ma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -62,4 +62,18 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void clearFields() {
+        EditText p1FirstName = (EditText) findViewById(R.id.p1FirstName);
+        p1FirstName.setText("");
+
+        EditText p1LastName = (EditText) findViewById(R.id.p1LastName);
+        p1LastName.setText("");
+
+        EditText p2FirstName = (EditText) findViewById(R.id.p2FirstName);
+        p2FirstName.setText("");
+
+        EditText p2LastName = (EditText) findViewById(R.id.p2LastName);
+        p2LastName.setText("");
+    }
+
 }
