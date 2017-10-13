@@ -23,4 +23,9 @@ public class WinnersCircle extends AppCompatActivity {
         Intent intent = getIntent();
     }
 
+    public void startNewGame(View view) {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
+
 }
