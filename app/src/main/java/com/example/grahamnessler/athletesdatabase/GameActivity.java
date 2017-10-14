@@ -18,7 +18,6 @@ public class GameActivity extends AppCompatActivity {
     private String p2First;
     private String p2Last;
     public Game game;
-    public MainActivity ma;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -118,5 +117,10 @@ public class GameActivity extends AppCompatActivity {
         int duration = Toast.LENGTH_SHORT;
 
         Toast.makeText(context, text, duration).show();
+    }
+
+    public void abandonGame(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

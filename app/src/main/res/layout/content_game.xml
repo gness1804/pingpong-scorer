@@ -12,7 +12,7 @@
         android:id="@+id/p2Inc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="121dp"
+        android:layout_marginBottom="211dp"
         android:onClick="incrementP2Score"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
         android:id="@+id/p2FirstDynamic"
         android:layout_width="82dp"
         android:layout_height="23dp"
-        android:layout_marginTop="319dp"
+        android:layout_marginTop="196dp"
         android:text="@string/p2FirstDyamic"
         app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -34,7 +34,7 @@
         android:id="@+id/p1FirstDynamic"
         android:layout_width="82dp"
         android:layout_height="23dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="139dp"
         android:text="@string/p1FirstDynamic"
         app:layout_constraintHorizontal_bias="0.427"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,7 +45,7 @@
         android:id="@+id/p2LastDynamic"
         android:layout_width="82dp"
         android:layout_height="23dp"
-        android:layout_marginTop="319dp"
+        android:layout_marginTop="196dp"
         android:text="@string/p2LastDynamic"
         app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -56,7 +56,7 @@
         android:id="@+id/p1LastDynamic"
         android:layout_width="82dp"
         android:layout_height="23dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="139dp"
         android:text="@string/p1LastDynamic"
         app:layout_constraintHorizontal_bias="0.844"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -67,7 +67,7 @@
         android:id="@+id/p2StaticLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="196dp"
         android:text="Player 2: "
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="43dp" />
@@ -76,7 +76,7 @@
         android:id="@+id/p1StaticLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="247dp"
+        android:layout_marginTop="139dp"
         android:text="Player 1: "
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="43dp" />
@@ -85,7 +85,7 @@
         android:id="@+id/p2Score"
         android:layout_width="55dp"
         android:layout_height="31dp"
-        android:layout_marginBottom="87dp"
+        android:layout_marginBottom="145dp"
         android:layout_marginLeft="255dp"
         android:text="@string/p2Score"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +95,7 @@
         android:id="@+id/p1Score"
         android:layout_width="55dp"
         android:layout_height="31dp"
-        android:layout_marginBottom="87dp"
+        android:layout_marginBottom="145dp"
         android:layout_marginLeft="43dp"
         android:text="@string/p1Score"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -109,13 +109,13 @@
         android:text="-"
         tools:layout_editor_absoluteX="31dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="30dp" />
+        android:layout_marginBottom="70dp" />
 
     <Button
         android:id="@+id/p2Dec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="70dp"
         android:layout_marginRight="54dp"
         android:onClick="decrementP2Score"
         android:text="-"
@@ -126,7 +126,7 @@
         android:id="@+id/p1Inc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="118dp"
+        android:layout_marginBottom="211dp"
         android:onClick="incrementP1Score"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -140,5 +140,16 @@
         android:text="@string/winnerDisplay"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="142dp" />
+
+    <Button
+        android:id="@+id/abandonGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:onClick="abandonGame"
+        android:text="@string/abandonGameButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
