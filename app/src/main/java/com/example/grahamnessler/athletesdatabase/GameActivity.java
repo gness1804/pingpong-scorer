@@ -89,8 +89,8 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void startNewGame () {
-        player1 = new Athlete(p1First, p1Last);
-        player2 = new Athlete(p2First, p2Last);
+        player1 = new Athlete(p1First, p1Last, this);
+        player2 = new Athlete(p2First, p2Last, this);
         game = new Game(player1, player2);
         player1.addGame(game);
         player2.addGame(game);
@@ -98,12 +98,29 @@ public class GameActivity extends AppCompatActivity {
         showNewScore();
     }
 
-    public static void showMinScoreError () {
-        //throw an error here
+    public void showMinScoreError () {
+        Context context = getApplicationContext();
+        CharSequence text = "Error: Scores cannot decrement below zero.";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast.makeText(context, text, duration).show();
     }
 
     public void goToWinnersCircle () {
         Intent intent = new Intent(this, WinnersCircle.class);
+        startActivity(intent);
+    }
+
+    public void showWinnerToast (Athlete winner) {
+        Context context = getApplicationContext();
+        CharSequence text = "The winner is: " + winner.getFirstName();
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast.makeText(context, text, duration).show();
+    }
+
+    public void abandonGame(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

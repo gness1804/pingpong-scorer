@@ -11,13 +11,14 @@ public class Athlete {
     private int wins = 0;
     private int score = 0;
     private Game game;
-
-    public String getChampionships() {
-        return this.firstName + " has won " + this.wins + " championships.";
-    }
+    private GameActivity ga;
 
     public int getScore() {
         return this.score;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
     }
 
     public void incrementWins () {
@@ -38,7 +39,7 @@ public class Athlete {
 
     public void decrementScore () {
         if (this.score < 1) {
-            GameActivity.showMinScoreError();
+            ga.showMinScoreError();
             return;
         }
         this.score--;
@@ -48,9 +49,10 @@ public class Athlete {
         this.score = 0;
     }
 
-    public Athlete (String first, String last) {
+    public Athlete (String first, String last, GameActivity ga) {
         this.firstName = first;
         this.lastName = last;
+        this.ga = ga;
         this.id = Math.random();
     }
 }

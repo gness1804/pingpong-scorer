@@ -24,9 +24,14 @@ public class Game {
         this.ga = ga;
     }
 
+    private void showWinnerToast() {
+        ga.showWinnerToast(winner);
+    }
+
     public void endGame (Athlete winner) {
         this.winner = winner;
         winner.incrementWins();
+        showWinnerToast();
         ga.goToWinnersCircle();
     }
 }

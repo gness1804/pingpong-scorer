@@ -8,4 +8,14 @@
     tools:context="com.example.grahamnessler.athletesdatabase.WinnersCircle"
     tools:showIn="@layout/activity_winners_circle">
 
+    <Button
+        android:id="@+id/newGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:onClick="startNewGame"
+        android:text="@string/newGameButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 </android.support.constraint.ConstraintLayout>
